@@ -1,4 +1,4 @@
 <resources>
     <string name="app_name">AlertasDen</string>
-    <string name="mapbox_access_token">pk.eyJ1IjoibWFyY29zMTIwNiIsImEiOiJja3M4N2k0ZHYxdDM1MnBuanZlZWZmMms2In0.BZjZ8KblWbs_bwxod-Ohig</string>
+    <string name="access_token">pk.eyJ1IjoibWFyY29zMTIwNiIsImEiOiJja3M4N2k0ZHYxdDM1MnBuanZlZWZmMms2In0.BZjZ8KblWbs_bwxod-Ohig</string>
 </resources>

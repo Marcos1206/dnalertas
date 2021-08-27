@@ -4,37 +4,57 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/teal_200"
+    android:backgroundTint="@color/mapboxBlue"
+    android:foregroundTint="@color/white"
     tools:context=".LoginActivity">
+
     <LinearLayout
         android:layout_width="409dp"
         android:layout_height="729dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="16dp"
+        android:animationCache="false"
+        android:background="@android:color/holo_blue_bright"
+        android:backgroundTint="@android:color/holo_blue_bright"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.053">
+        app:layout_constraintVertical_bias="0.0">
 
         <EditText
             android:id="@+id/txtUser"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
+            android:background="@color/white"
+            android:backgroundTint="@color/mapboxwhite"
             android:ems="10"
             android:hint="Correo"
-            android:inputType="textEmailAddress" />
+            android:inputType="textEmailAddress"
+            android:textColor="@android:color/tertiary_text_light"
+            android:textColorHighlight="@android:color/darker_gray"
+            android:textColorHint="@color/mapboxGray"
+            android:textColorLink="@color/white" />
 
         <EditText
             android:id="@+id/txtPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
+            android:background="@color/white"
+            android:backgroundTint="@color/white"
             android:ems="10"
             android:hint="Contraseña"
-            android:inputType="textPassword" />
+            android:inputType="textPassword"
+            android:textAlignment="gravity"
+            android:textColor="@android:color/tertiary_text_light"
+            android:textColorHighlight="@android:color/darker_gray"
+            android:textColorHint="@color/mapboxGray"
+            android:textColorLink="@color/white" />
 
         <ProgressBar
             android:id="@+id/progressBar"
@@ -56,28 +76,62 @@
             android:orientation="horizontal">
 
             <Button
-                android:onClick="register"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:layout_margin="10dp"
-                android:text="REGISTRARSE" />
+                android:layout_weight="1"
+                android:background="@color/mapboxBlue"
+                android:onClick="register"
+                android:text="REGISTRARSE"
+                android:textColor="@color/white" />
 
             <Button
-                android:onClick="acceder"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:layout_margin="10dp"
-                android:text="ACCEDER" />
+                android:layout_weight="1"
+                android:background="#283593"
+                android:onClick="acceder"
+                android:text="ACCEDER"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white" />
         </LinearLayout>
 
         <TextView
-            android:onClick="forgot"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:onClick="forgot"
             android:text="¿Olvidaste tu Contraseña?"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:onClick="google"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/common_google_signin_btn_icon_dark_focused" />
+
+        <TextView
+            android:id="@+id/txtView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:backgroundTint="@color/white"
+            android:text="Accede con tu Cuenta de Google"
+            android:textColorHint="@color/white"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
     </LinearLayout>
